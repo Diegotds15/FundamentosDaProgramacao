@@ -4,5 +4,3 @@ while True:
         break
     except ValueError:
         print("Por favor, digite apenas números.")
-
-#teste 123
