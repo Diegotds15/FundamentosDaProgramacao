@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vídeo Interativo</title>
+    <style>
+        /* Estilos CSS aqui */
+    </style>
+</head>
+<body>
+    <video id="myVideo" controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <div id="question" style="display: none;">
+        <thead>Qual o nome?</thead>
+        <input type="text" id="answer">
+        <button onclick="submitAnswer()">Enviar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
