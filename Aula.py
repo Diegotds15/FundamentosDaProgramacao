@@ -1,7 +1,7 @@
-perg1 = input('Está chuvendo? Sim/Não')
-perg2 = input('Tem Guarda-chuva? Sim/Não')
+perg1 = input('Está chuvendo? S - Sim/N - Não: ').upper()
+perg2 = input('Tem Guarda-chuva? S - Sim/N - Não: ').upper()
 
-if (perg1 == 'Sim' and perg2 == 'Sim') or (perg1 == 'Não') or (perg2 == não):
+if (perg1 == 'S' and perg2 == 'S') or (perg2 == 'S') or (perg1 == 'N' and perg2 == 'N'):
     print('pode sair tranquilo!')
 else:
-    print('melhor aguardar')
+    print('não pode sair tranquilo!')
