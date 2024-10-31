@@ -49,7 +49,7 @@ numero = int(input("Qual o número a ser fatorado?: "))
 resultado = fatorial(numero)
 print(resultado)'''
 
-sair = False
+'''sair = False
 quantidade = 0
 nome = []
 
@@ -68,4 +68,40 @@ while sair != True:
         if len(nome) > 0:
             print(f"A lista de nomes é {nome}")
         else:
-            print("A lista está vazia!")
+            print("A lista está vazia!")'''
+
+def exibir_assentos(assentos):
+    for i in range(15): #len(assentos)
+        if assentos[i] == 0:
+            print(f'Assento {i+1} esta Livre!')
+        else:
+            print(f'Assento {i+1} esta ocupado!')
+
+def reservar_assento(assentos):
+    num = int(input('Informe numero do assento:'))
+    if num < 1 or num > 15:
+        print('Assento invalido!')
+    else: 
+        if assentos[num-1] == 0:
+            assentos[num-1] = 1
+            print(f'Assento {num} reservado!')
+        else:
+            print('Assento esta ocupado!')
+
+assentos = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0] #assentos = [0] * 15
+escolha ="1"
+
+while escolha != "3":
+    print('\n1. Exibir status de assento')
+    print('\n2. Reservar assentos')
+    print('\n3. Sair')
+    print("")
+    escolha = input('Informe opcao:')
+    if escolha == "1":
+        exibir_assentos(assentos)
+    elif escolha == "2":
+        reservar_assento(assentos)
+    elif escolha == "3":
+        print("FIM")
+    else:
+        print('Opcao invalida')
